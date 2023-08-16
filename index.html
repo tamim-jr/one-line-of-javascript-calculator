@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JavaScript Calculator</title>
+</head>
+<style>
+     .header{
+         text-align: center;
+         font-family: sans-serif;
+     }
+     .calstyle{
+         width: 1024px;
+         margin: auto;
+         padding: 30px;
+         border-radius: 5px;
+         background-color: rgb(170, 170, 170);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: row;
+     }
+     .inpst{
+         margin: 5px;
+         height: 2rem;
+     }
+</style>
+<body>
+     <h1 class="header">Calculator by JavaScript</h1>
+     <form name="calculator" class="calstyle">
+         <input type="'text" class="inpst" size="30" name="inpvalue" placeholder="Input Data">
+         <input type="button" class="inpst" name="B1" value="Answer" onclick="cal()">
+         Answer:<input type="text" class="inpst" size="30" name="answer" placeholder="Result">
+         <input type="button" class="inpst" name="B2" value="Reset" onclick="{window.location.reload()}">
+     </form>
+     <script>
+  const cal = () =>{ document.calculator.answer.value=eval(document.calculator.inpvalue.value)
+         }
+    </script>
+</body>
+</html>
